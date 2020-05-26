@@ -1,0 +1,143 @@
+ 
+ /* define styles html and body  */
+      html {
+           margin-right: 15px;
+      }
+
+        body{
+            width: 100%;
+            height: 95vh;
+            text-align: center;
+            box-sizing: border-box;
+            background-image: linear-gradient( 180deg, #f2b385, #d6e349 , #f0cdb4);
+           
+
+        }
+      /* define app-container as grid  */
+        #app-container{
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            grid-template-rows: 200px 250px 1fr 1fr;
+            grid-template-areas:
+            "header"
+            "zipCode"
+            "feelings"
+            "result"
+            "footer";
+            
+        }
+         
+        /* style headline */
+
+        .headline{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-area: header;
+            min-height: 10vh;
+            font-size: 4em;
+            font-family: 'Anton', sans-serif;
+            color: blue;
+            font-weight: bold;
+            box-shadow: 0px 5px 5px 0px #c0cefa;
+            margin-bottom: 10px;
+
+        }
+
+        /* style zip code holder container */
+
+        .zip-code-holder{
+            grid-area: zipCode;
+            min-height: 10vh;
+            font-size: 3em;
+            margin-top: 20px;
+            
+            
+        }
+
+
+        .zip-code-holder input {
+            width: 45%;
+            padding: 5px;
+            border: 2px solid #053df2;
+            border-radius: 5px;
+            box-shadow: 0px 7px 7px 0px #beccf7;
+            text-align: center;
+            font-size: 1em;
+            
+        }
+            /* make font-size of placeholder for both input  */
+        ::placeholder {
+            font-size: 20px;
+
+        } 
+      /* style feeling cantainer */
+
+        .feelings-holder{
+            grid-area: feelings;
+            min-height: 20vh;
+            font-size: 2.5em;
+        
+            
+        }
+ /*  style for error content */
+        #error-content {
+            padding: 5px;
+            font-size: 0.9em;
+            color: red;
+            
+            
+        }
+
+        /* style for textarea */
+        .feelings-holder textarea{
+            border: 1px solid blue;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        .feelings-holder button {
+            width: 30%;
+            font-size: 0.8em;
+            padding: 5px;
+            background-color: blue;
+            border-bottom: 1px solid paleturquoise;
+            border-radius: 5px 15px 5px 15px;
+            box-shadow: 0px 7px 7px 0px #d0daf7;
+            color: white;
+            list-style: none;
+            
+
+        }
+
+        /* style for result container */
+        .result-holder{
+            grid-area: result;
+            min-height: 20vh;
+            font-size: 2em;
+            box-shadow: 0px 5px 5px 0px #dce2f2;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .title {
+            font-size: 1.6em;
+        }
+
+        #entryHolder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .result-holder .title {
+            border-bottom: 2px solid blue;
+        }
+
+    /* style footer */
+        #footer {
+            grid-area: footer;
+            padding: 15px 15px;
+            background-color: #d2d4c1;
+            border-radius: 10px;
+        }
