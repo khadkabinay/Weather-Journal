@@ -1,7 +1,7 @@
 
-        // serve as an endpoint 
+        // serve as an endpoint data
 
-        const projectData = [];
+        let projectData = {};
 
 
         // Require Express to run server and routes
@@ -47,20 +47,20 @@
 
         function addTempToObj(req,res){
           
-
-          newEntry = {temp: req.body.temp,
+          // data coming as post request asigned to an object
+         let newEntry = {temp: req.body.temp,
                       feelings: req.body.feel,
                       date:req.body.date
                         }
-          
-          projectData.push(newEntry)
+        // asigning newEntry object to endpoint object named projectData
+          projectData = newEntry;
             res.send(projectData)
          };
         
 
 
 
-        // send end point data to static website
+        // send end point object where it is fetched 
         app.get("/all", getFeelingsWethData);
 
         function getFeelingsWethData(req,res){

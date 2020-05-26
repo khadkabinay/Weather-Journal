@@ -131,13 +131,15 @@
         
         // updateUI function define
         const updateUI = async ()=> {
+            // fetch all data from endpoint object
             const request = await fetch('/all')
             
             try{
+                //update to the dom dynamically
                     const allData = await request.json();
-                    document.getElementById('temp').innerHTML    = ` ${allData[0].temp}`;
-                    document.getElementById('date').innerHTML    = ` ${allData[0].date}`;
-                    document.getElementById('content').innerHTML = ` ${allData[0].feelings}`;
+                    document.getElementById('temp').innerHTML    = ` ${allData.temp}`;
+                    document.getElementById('date').innerHTML    = ` ${allData.date}`;
+                    document.getElementById('content').innerHTML = ` ${allData.feelings}`;
         
             }catch(error){
                 console.log("error",  error);
