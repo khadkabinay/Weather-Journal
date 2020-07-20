@@ -7,6 +7,7 @@
         // Require Express to run server and routes
         const express = require('express');
         const path    = require("path");
+        require('dotenv').config()
 
 
         /* Start up an instance of app */
@@ -31,11 +32,11 @@
 
 
         // Setup Server
-        const port   = 3000
-        const server =  app.listen(port, listening);
+        const PORT   = process.env.PORT || 8080
+        const server =  app.listen(PORT, listening);
         
         function listening(){
-            console.log(`server is running on localhost:${port}`);
+            console.log(`server is running on localhost:${PORT}`);
         };
 
 
